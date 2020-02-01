@@ -1,40 +1,31 @@
-def add(x, y):
-    return x + y
+X = [[5, 4, 3], 
+     [3, 6, 7],
+     [2, 5, 8]]
 
-def subtract(x, y):
-    return x - y
 
-def divide(x, y):
-    return x / y
+Y = [[1, 3, 7],
+     [4, 3, 1],
+     [6, 9, 6]]
 
-def multiply(x, y):
-    return x * y
+result = [[0, 0, 0],
+          [0, 0, 0],
+          [0, 0, 0]]
 
-print("Select operation:")
-print("1.add")
-print("2.subtract")
-print("3.divide")
-print("4.multiply")
 
-choice = input("Enter choice(1/2/3/4):  ")
+for i in range(len(X)):
+    for j in range(len(Y[0])):
+        for k in range(len(Y)):
+            result[i][j] += X[i][k] * Y[k][j]
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+for r in result: 
+    print(r)
 
-if choice == '1':
-    print(num1,"+",num2,"=", add(num1, num2))
 
-elif choice == '2':
-    print(num1,"-",num2,"=", subtract(num1, num2))
 
-elif choice == '3':
-    print(num1,"/",num2,"=", divide(num1, num2))
 
-elif choice == '4':
-    print(num1,"*",num2,"=", multiply(num1, num2))
 
-else:
-    print("Invalid input")
+
+
 
 
 
